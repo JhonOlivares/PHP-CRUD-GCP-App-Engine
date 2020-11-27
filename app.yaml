@@ -1,0 +1,97 @@
+runtime: php74
+runtime_config:
+  document_root: aerolineaperu
+
+env_variables:  
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/dev-pro-j-12345852:southamerica-east1:general-db;dbname=dbaerolinea
+  MYSQL_USER: root
+  MYSQL_PASSWORD: EgK3P6B6H2Eemjkc
+
+entrypoint: serve router.php      #archivo principal, 
+
+handlers:
+- url: /css
+  static_dir: css #directorio de los estilos
+- url: /js
+  static_dir: js #directorio de los scrips
+- url: /.*
+  static_dir: img #directorio de las imagenes
+
+#php74----------------------------------------------------
+# - url: /(avion_index|avion_create)\.php$
+#   script: auto
+
+# - url: /(.*)\.php$
+#   script: auto
+
+# - url: .*
+#   script: auto
+
+# cuando no se especifica el entrypoint, el archivo por defecto es index.php y puedes utilizar los handler comentados arriba
+
+
+
+
+
+
+
+
+
+
+#php55-------------------------------
+# no usar el archivo router.php
+
+
+  # - url: /
+#   script: /index.php
+
+# - url: /index.php
+#   script: /index.php
+
+# # Avion pages
+# - url: /avion_index.php
+#   script: /avion_index.php
+
+# - url: /avion_create.php
+#   script: /avion_create.php
+
+# - url: /avion_edit.php
+#   script: /avion_edit.php
+
+# - url: /avion_eliminar.php
+#   script: /avion_eliminar.php
+
+# # Cliente pages
+# - url: /cliente_index.php
+#   script: /cliente_index.php
+
+# - url: /cliente_create.php
+#   script: /cliente_create.php
+
+# - url: /cliente_edit.php
+#   script: /cliente_edit.php
+
+# - url: /cliente_eliminar.php
+#   script: /cliente_eliminar.php
+
+# # vuelo pages
+# - url: /vueloprog_index.php
+#   script: /vueloprog_index.php
+
+# - url: /vueloprog_create.php
+#   script: /vueloprog_create.php
+
+# - url: /vueloprog_edit.php
+#   script: /vueloprog_edit.php
+
+# - url: /vueloprog_eliminar.php
+#   script: /vueloprog_eliminar.php
+
+# # aeropuerto pages
+# - url: /aeropuerto_index.php
+#   script: /aeropuerto_index.php
+
+# - url: /.*
+#   script: not_found.php
+
+

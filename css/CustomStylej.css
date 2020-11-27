@@ -1,0 +1,50 @@
+
+
+
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+    /* Mark the active step: */
+    .step.active {
+        opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+        background-color: #4CAF50;
+    }
+.jdev-border{
+    padding:5px 10px 5px 10px;
+}
+.jdev-border-fill{
+    padding:5px 10px 5px 10px;
+    background-color:#007bff;
+    color: white;
+}
+.jdev-fill-dark {
+    padding: 5px 10px 5px 10px;
+    background-color: #2b3c57;
+    border-color: #2b3c57 !important;
+    color: white;
+}
+
+.jdev-fill-light {
+    padding: 5px 10px 5px 10px;
+    background-color: #66ccff;
+    border-color: #2b3c57 !important;
+}
